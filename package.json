@@ -1,0 +1,28 @@
+{
+	"name": "postcss-admdh-grid",
+	"version": "0.0.1",
+	"description": "A simple grid for PostCSS",
+	"main": "index.js",
+	"derictories":{
+		"test":"test"
+	},
+	"scripts":{
+		"test": "node test/test.js"
+	},
+	"repository":{
+		"type": "git",
+		"url": "https://github.com/admdh/postcss-admdh-grid.git"
+	},
+	"keywords":[
+		"postcss", "postcss-plugin", "grid"
+	],
+	"author":{
+		"name": "ADM DESIGNHOUSE",
+		"email": "admdh.com@gmail.com"
+	},
+	"license": "MIT",
+	"devDependencies": {},
+    "dependencies": {
+      "postcss": "^5.0.0",
+    }
+}
