@@ -1,9 +1,9 @@
 var postcss = require('postcss');
 
 module.exports = postcss.plugin('postcss-grid', function (opts) {
-    opts = opts || {};
-    
-    function unitParse(str){
+	opts = opts || {};
+	
+	function unitParse(str){
 		var returnValue = {};
 		var match = str.match(/\d./);
 		
@@ -15,10 +15,10 @@ module.exports = postcss.plugin('postcss-grid', function (opts) {
 		}
 		return returnValue;
 	}
-    
-    return function(css, result){
+	
+	return function(css, result){
 
-        css.walkDecls(function (decl){
+		css.walkDecls(function (decl){
 			if(decl.prop === 'create-row'){
 				var selectorName = decl.parent.selector;
 				var rowValue = decl.value;
@@ -48,14 +48,47 @@ module.exports = postcss.plugin('postcss-grid', function (opts) {
 			
 			if(decl.prop === 'create-grid'){
 				var totalColumns = decl.value;
-				var selectorName = decl.parent.selector + '__';
+				var selectorName = decl.parent.selector + '_';
 				for (i = 1; i <= totalColumns; i++){
 					var width = ((i / totalColumns) * 100).toFixed(5) * 1;
 					decl.parent.parent.append(selectorName + i + '{width: '+ width + '%; }');
 				}
 				decl.parent.remove();
 			}
+			
+			if(decl.prop === 'create-offset'){
+				var totalColumns = decl.value;
+				var offsetColumns = totalColumns - 1;
+				var selectorName = decl.parent.selector + '_';
+				for (i = 1; i <= offsetColumns; i++){
+					var offsetWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
+					decl.parent.parent.append(selectorName + i + '{margin-left: '+ offsetWidth + '%; }');
+				}
+				decl.parent.remove();
+			}
+			
+			if(decl.prop === 'create-push'){
+				var totalColumns = decl.value;
+				var pushColumns = totalColumns - 1;
+				var selectorName = decl.parent.selector + '_';
+				for (i = 1; i <= pushColumns; i++){
+					var pushWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
+					decl.parent.parent.append(selectorName + i + '{left: '+ pushWidth + '%; right: auto;}');
+				}
+				decl.parent.remove();
+			}
+			
+			if(decl.prop === 'create-pull'){
+				var totalColumns = decl.value;
+				var pullColumns = totalColumns - 1;
+				var selectorName = decl.parent.selector + '_';
+				for (i = 1; i <= pullColumns; i++){
+					var pullWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
+					decl.parent.parent.append(selectorName + i + '{left: auto; right: '+ pullWidth + '%; }');
+				}
+				decl.parent.remove();
+			}
 		});
 
-    };
+	};
 });
