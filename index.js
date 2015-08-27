@@ -4,6 +4,10 @@ module.exports = postcss.plugin('postcss-grid', function (opts) {
     opts = opts || {};
     return function(css, result){
 
+		// css.walkRules(rule_filter, function (rule) {
+		// 	rule.walkDecls(decl_filter, function (decl) {});
+		// });
+
 		// css.walkRules(function(rule){
 		// 	if (rule.selector === 'grid'){
 		// 		console.log(rule.nodes);
