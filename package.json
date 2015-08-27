@@ -23,6 +23,6 @@
 	"license": "MIT",
 	"devDependencies": {},
     "dependencies": {
-      "postcss": "^5.0.0",
+      "postcss": "*"
     }
 }
