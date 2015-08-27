@@ -29,7 +29,7 @@ module.exports = postcss.plugin('postcss-grid', function (opts) {
 				decl.parent.append({prop: 'position', value: 'relative'});
 				decl.parent.append({prop: 'width', value: '100%'});
 				
-				// css.insertAfter((selectorName + ':before,' + selectorName + ':after { content: " "; display: table; }' + selectorName + ':after { clear: both;}'));
+				css.insertAfter(decl.parent ,(selectorName + ':before,' + selectorName + ':after { content: " "; display: table; }' + selectorName + ':after { clear: both;}'));
 				
 				decl.removeSelf();
 			}
