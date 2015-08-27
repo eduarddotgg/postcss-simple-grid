@@ -12,7 +12,7 @@ var test = function (input, output) {
     assert.equal(postcss(grid(settings)).process(input).css, output);
 };
 
-test('.row{create-row: 1320px;}', '.row{.row{display: block; margin: 0 auto; max-width: 1320px; position: relative; width: 100%; }} .row:before,.row:after{ content: " "; display: table; } .row:after{ clear: both; }');
+test('.row{create-row: 1320px;}', '.row{display: block; margin: 0 auto; max-width: 1320px; position: relative; width: 100%; } .row:before,.row:after{ content: " "; display: table; } .row:after{ clear: both; }');
 test('.column{create-column: 40px;}', '.column{ float: left; padding: 0 20px; position: relative; width: 100%; }');
 test('.small{create-grid: 12;}', '.small_1{ width: 8.33333%; } .small_2{ width: 16.66667%; } .small_3{ width: 25%; } .small_4{ width: 33.33333%; } .small_5{ width: 41.66667%; } .small_6{ width: 50%; } .small_7{ width: 58.33333%; } .small_8{ width: 66.66667%; } .small_9{ width: 75%; } .small_10{ width: 83.33333%; } .small_11{ width: 91.66667%; } .small_12{ width: 100%; }');
 test('.small-offset{create-offset: 12;}', '.small-offset_0{ margin-left: 0%; } .small-offset_1{ margin-left: 8.33333%; } .small-offset_2{ margin-left: 16.66667%; } .small-offset_3{ margin-left: 25%; } .small-offset_4{ margin-left: 33.33333%; } .small-offset_5{ margin-left: 41.66667%; } .small-offset_6{ margin-left: 50%; } .small-offset_7{ margin-left: 58.33333%; } .small-offset_8{ margin-left: 66.66667%; } .small-offset_9{ margin-left: 75%; } .small-offset_10{ margin-left: 83.33333%; } .small-offset_11{ margin-left: 91.66667%; }');
