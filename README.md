@@ -32,7 +32,7 @@ HTML examples
 	<div class="column small_1">column 1</div>
 	<div class="column small_1">column 2</div>
 	...
-	<div class="column small_1">column 2</div>
+	<div class="column small_1">column 12</div>
 </div>
 
 <!-- keep width for specified with media query viewport size -->
@@ -40,7 +40,7 @@ HTML examples
 	<div class="column medium_1">column 1</div>
 	<div class="column medium_1">column 2</div>
 	...
-	<div class="column small_1">column 2</div>
+	<div class="column small_1">column 12</div>
 </div>
 ```
 
