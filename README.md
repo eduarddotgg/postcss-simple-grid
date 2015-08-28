@@ -189,4 +189,6 @@ will compile to:
 	left: auto;
 	right: 91.66667%;
 }
-```
+```  
+
+It just can't be easier! 
