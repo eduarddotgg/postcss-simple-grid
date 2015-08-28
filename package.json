@@ -1,6 +1,6 @@
 {
-	"name": "postcss-admdh-grid",
-	"version": "0.0.1",
+	"name": "postcss-simple-grid",
+	"version": "0.5.0",
 	"description": "A simple grid for PostCSS",
 	"main": "index.js",
 	"derictories":{
@@ -16,10 +16,7 @@
 	"keywords":[
 		"postcss", "postcss-plugin", "grid"
 	],
-	"author":{
-		"name": "ADM DESIGNHOUSE",
-		"email": "admdh.com@gmail.com"
-	},
+	 "author": "ADM DESIGNHOUSE <admdh.com@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {},
     "dependencies": {
