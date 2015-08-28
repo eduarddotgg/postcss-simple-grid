@@ -171,7 +171,7 @@ will compile to:
 Use ```create-pull: 12;``` to create pull columns, where ```12``` is number of pull columns
 ```css
 .pull{
-	create-push: 12;
+	create-pull: 12;
 }
 ```
 will compile to:
