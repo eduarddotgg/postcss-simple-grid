@@ -2,6 +2,8 @@
 
 <img align="right" width="57" height="108" title="Dev Kit Main Logo" src="http://adm-designhouse.com/dev-kit-main-logo.png">
 
+<img align="right" width="108" height="108" title="Philosopher’s stone, logo of PostCSS" src="http://postcss.github.io/postcss/logo.svg" hspace="20">
+
 Simple grid is a simple postcss plugin that will help you create grid with minimum settings. There is no need to specify every single column any more.
 
 
