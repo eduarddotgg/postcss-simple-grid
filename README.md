@@ -1,13 +1,12 @@
 # PostCSS Simple grid
 
-<!-- <img align="right" width="95" height="95" title="Philosopher’s stone, logo of PostCSS" src="http://postcss.github.io/postcss/logo.svg"> -->
+Simple grid is a simple postcss plugin that will help you create grid with minimum settings. There is no need to specify every single column any more.
 
 
 ## Instalation
 ```console
 $ npm install postcss-simple-grid
 ```
-Simple grid is a simple postcss plugin that will help you create grid with minimum settings. There is no need to specify every single column any more.
 
 ## Usage
 Setting up with gulp:
