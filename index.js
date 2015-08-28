@@ -1,6 +1,6 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-grid', function (opts) {
+module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 	opts = opts || {};
 
 	function unitParse(str){
