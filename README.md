@@ -23,7 +23,7 @@ gulp.task('css', function(){
 });
 ```
 HTML examples
-```
+```html
 <!-- keep width for all viewport sizes -->
 <div class="row">
 	<div class="column small_1">column 1</div>
