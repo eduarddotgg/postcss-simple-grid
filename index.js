@@ -1,7 +1,9 @@
 var postcss = require('postcss');
 
 module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
-	opts = opts || {};
+	opts = opts || {
+		separator: '_',
+	};
 
 	function unitParse(str){
 		var returnValue = {};
@@ -48,7 +50,7 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 
 			if(decl.prop === 'create-grid'){
 				var totalColumns = decl.value;
-				var selectorName = decl.parent.selector + '_';
+				var selectorName = decl.parent.selector + opts.separator;
 				for (i = 1; i <= totalColumns; i++){
 					var width = ((i / totalColumns) * 100).toFixed(5) * 1;
 					decl.parent.parent.append(selectorName + i + '{width: '+ width + '%; }');
@@ -59,7 +61,7 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 			if(decl.prop === 'create-offset'){
 				var totalColumns = decl.value;
 				var offsetColumns = totalColumns - 1;
-				var selectorName = decl.parent.selector + '_';
+				var selectorName = decl.parent.selector + opts.separator;
 				for (i = 0; i <= offsetColumns; i++){
 					var offsetWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
 					decl.parent.parent.append(selectorName + i + '{margin-left: '+ offsetWidth + '%; }');
@@ -70,7 +72,7 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 			if(decl.prop === 'create-push'){
 				var totalColumns = decl.value;
 				var pushColumns = totalColumns - 1;
-				var selectorName = decl.parent.selector + '_';
+				var selectorName = decl.parent.selector + opts.separator;
 				for (i = 0; i <= pushColumns; i++){
 					var pushWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
 					decl.parent.parent.append(selectorName + i + '{left: '+ pushWidth + '%; right: auto;}');
@@ -81,7 +83,7 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 			if(decl.prop === 'create-pull'){
 				var totalColumns = decl.value;
 				var pullColumns = totalColumns - 1;
-				var selectorName = decl.parent.selector + '_';
+				var selectorName = decl.parent.selector + opts.separator;
 				for (i = 0; i <= pullColumns; i++){
 					var pullWidth = ((i / totalColumns) * 100).toFixed(5) * 1;
 					decl.parent.parent.append(selectorName + i + '{left: auto; right: '+ pullWidth + '%; }');
