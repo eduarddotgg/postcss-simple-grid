@@ -31,18 +31,18 @@ HTML examples
 ```html
 <!-- keep width for all viewport sizes -->
 <div class="row">
-	<div class="column small_1">column 1</div>
-	<div class="column small_1">column 2</div>
+	<div class="column small--1">column 1</div>
+	<div class="column small--1">column 2</div>
 	...
-	<div class="column small_1">column 12</div>
+	<div class="column small--1">column 12</div>
 </div>
 
 <!-- keep width for specified with media query viewport size -->
 <div class="row">
-	<div class="column medium_1">column 1</div>
-	<div class="column medium_1">column 2</div>
+	<div class="column medium--1">column 1</div>
+	<div class="column medium--1">column 2</div>
 	...
-	<div class="column small_1">column 12</div>
+	<div class="column medium--1">column 12</div>
 </div>
 ```
 
@@ -102,26 +102,26 @@ Use ```create-grid: 12;``` to create grid columns, where ```12``` is the number 
 ```
 will compile to:
 ```css
-.small_1 {
+.small--1 {
 	width: 8.33333%;
 }
-.small_2 {
+.small--2 {
 	width: 16.66667%;
 }
 ...
-.small_12 {
+.small--12 {
 	width: 100%;
 }
 
 @media screen and (min-width: 640px) {
-	.medium_1 {
+	.medium--1 {
 		width: 8.33333%;
 	}
-	.medium_2 {
+	.medium--2 {
 		width: 16.66667%;
 	}
 	...
-	.medium_12 {
+	.medium--12 {
 		width: 100%;
 	}
 }
@@ -136,14 +136,14 @@ Use ```create-offset: 12;``` to create offset columns, where ```12``` is number 
 ```
 will compile to:
 ```css
-.offset_0 {
+.offset--0 {
 	margin-left: 0%;
 }
-.offset_1 {
+.offset--1 {
 	margin-left: 8.33333%;
 }
 ...
-.offset_11 {
+.offset--11 {
 	margin-left: 91.66667%;
 }
 ```
@@ -157,16 +157,16 @@ Use ```create-push: 12;``` to create push columns, where ```12``` is number of p
 ```
 will compile to:
 ```css
-.push_0 {
+.push--0 {
 	left: 0%;
 	right: auto;
 }
-.push_1 {
+.push--1 {
 	left: 8.33333%;
 	right: auto;
 }
 ...
-.push_11 {
+.push--11 {
 	left: 91.66667%;
 	right: auto;
 }
@@ -179,16 +179,16 @@ Use ```create-pull: 12;``` to create pull columns, where ```12``` is number of p
 ```
 will compile to:
 ```css
-.pull_0 {
+.pull--0 {
 	left: auto;
 	right: 0%;
 }
-.pull_1 {
+.pull--1 {
 	left: auto;
 	right: 8.33333%;
 }
 ...
-.pull_11 {
+.pull--11 {
 	left: auto;
 	right: 91.66667%;
 }
