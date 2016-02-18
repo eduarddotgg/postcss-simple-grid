@@ -1,6 +1,6 @@
 {
 	"name": "postcss-simple-grid",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "A simple grid for PostCSS",
 	"main": "index.js",
 	"derictories":{
@@ -16,7 +16,7 @@
 	"keywords":[
 		"postcss", "postcss-plugin", "grid"
 	],
-	 "author": "ADM DESIGNHOUSE <admdh.com@gmail.com>",
+	 "author": "Eduárd Pocstár <admdh.com@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {},
     "dependencies": {
