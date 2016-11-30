@@ -27,9 +27,6 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 				var rowValue = decl.value;
 
 				decl.parent.append({
-					prop: 'display', value: 'block'
-				});
-				decl.parent.append({
 					prop: 'margin', value: '0 auto'
 				});
 				decl.parent.append({
@@ -37,9 +34,6 @@ module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 				});
 				decl.parent.append({
 					prop: 'position', value: 'relative'
-				});
-				decl.parent.append({
-					prop: 'width', value: '100%'
 				});
 
 				css.insertAfter(decl.parent ,(selectorName + ':before,' + selectorName + ':after { content: " "; display: table; }' + selectorName + ':after { clear: both; }'));
