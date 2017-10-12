@@ -2,7 +2,7 @@ var postcss = require('postcss');
 
 module.exports = postcss.plugin('postcss-simple-grid', function (opts) {
 	opts = opts || {
-		separator: '--',
+		separator: '--'
 	};
 
 	function unitParse(str) {

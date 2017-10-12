@@ -1,25 +1,27 @@
 {
 	"name": "postcss-simple-grid",
-	"version": "0.7.1",
+	"version": "1.0.0",
 	"description": "A simple grid for PostCSS",
 	"main": "index.js",
-	"derictories":{
-		"test":"test"
+	"derictories": {
+		"test": "test"
 	},
-	"scripts":{
+	"scripts": {
 		"test": "node test/test.js"
 	},
-	"repository":{
+	"repository": {
 		"type": "git",
-		"url": "https://github.com/admdh/postcss-admdh-grid.git"
+		"url": "https://github.com/iamfrntdv/postcss-admdh-grid.git"
 	},
-	"keywords":[
-		"postcss", "postcss-plugin", "grid"
+	"keywords": [
+		"postcss",
+		"postcss-plugin",
+		"grid"
 	],
-	 "author": "Eduárd Pocstár <admdh.com@gmail.com>",
+	"author": "Eduard Pochtar <admdh.com@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {},
-    "dependencies": {
-      "postcss": "*"
-    }
+	"dependencies": {
+		"postcss": "^6.0.13"
+	}
 }
